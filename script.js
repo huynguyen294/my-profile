@@ -65,3 +65,80 @@ function checkActiveSlide() {
     right.classList.remove('disable');
   }
 }
+
+function renderCardProject() {
+  const boxProjects = document.getElementById('box-projects');
+  const projects = [
+    {
+      images: [
+        './images/project-covers/16skin/1.jpg',
+        './images/project-covers/16skin/2.jpg',
+      ],
+      name: '16SKIN - COSMETICS WEBSITE',
+      technologies: 'ReactJS, Redux, Scss',
+      description: [
+        'A website only Front-end.',
+        'Make for practice purposes and involving with front-end problems when implementing a large sales website.',
+        'Live Demo: <a href="https://huynguyen294.github.io/16skin-fe/">https://huynguyen294.github.io/16skin-fe/</a>',
+      ],
+    },
+    {
+      images: [
+        './images/project-covers/ibanking-fee/1.jpg',
+        './images/project-covers/ibanking-fee/2.jpg',
+      ],
+      name: 'IBANKING FEE WEBSITE',
+      technologies: 'ReactJS, Redux, NodeJS, ExpressJS, MongoDB',
+      description: [
+        'A small MERN stack website',
+        'Make for practice purposes and involving into the problems when doing a completed website like: making web API server, fetching API, handing functions...',
+        'Live Demo: <a href="https://huynguyen294.github.io/bankingtuition-fe/">https://huynguyen294.github.io/bankingtuition-fe/</a>',
+      ],
+    },
+    {
+      images: [
+        './images/project-covers/50-project-web/1.jpg',
+        './images/project-covers/50-project-web/2.jpg',
+      ],
+      name: '21 SMALL WEBSITE PROJECTS',
+      technologies: 'Html, Javascript, Css',
+      description: [
+        'Made for the purpose of practicing html, css and javascript.',
+        'Live Demo: <a href="https://huynguyen294.github.io/50-project-web/">https://huynguyen294.github.io/50-project-web/</a>',
+      ],
+    },
+    {
+      images: [
+        './images/project-covers/todo/1.jpg',
+        './images/project-covers/todo/2.jpg',
+      ],
+      name: 'TODO WEBSITE',
+      technologies: 'Html, Javascript, Css',
+      description: [
+        'Made for the purpose of practicing advanced javascript skills learned on F8 such as: IIFE, scope, closure, hoisting,...',
+        'Live Demo: <a href="https://huynguyen294.github.io/todo_app_js/">https://huynguyen294.github.io/todo_app_js/</a>',
+        'Source Code: <a href="https://github.com/huynguyen294/todo_app_js">https://github.com/huynguyen294/todo_app_js</a>',
+      ],
+    },
+  ];
+  let cardProjects = '';
+  projects.forEach((project) => {
+    cardProjects += `<div class="card-project">
+    <div class="project-cover-img">
+      ${project.images
+        .map((img) => `<img src="${img}" alt="cover image"></img>`)
+        .join('')}
+    </div>
+    <h3 class="card-title">${project.name}</h3>
+    <p class="technologies">${project.technologies}</p>
+    <ul class="description">
+        ${project.description
+          .map((descriptionLine) => `<li>${descriptionLine}</li>`)
+          .join('')}
+    </ul>
+  </div>`;
+  });
+  boxProjects.innerHTML = cardProjects;
+}
+
+renderCardProject();

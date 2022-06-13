@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Montserrat:wght@100;300;400;500;600&family=Quicksand:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;600&display=swap&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap&family=Comfortaa:wght@100;200;300;400;500;600;700&family=Grandstander:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;600&display=swap&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap&family=Comfortaa:wght@100;200;300;400;500;600;700&family=Grandstander:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -40,7 +40,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: var(--third-color) !important;
+  background-color: rgba(21, 43, 6, 0.4) !important;
   color: #fff !important;
   position: relative;
   height: 100vh;
@@ -245,8 +245,12 @@ body {
 
 .slide .slide-title{
   padding: 0;
-  margin: .5em 0;
-  font-family: 'Roboto', sans-serif;
+  margin: 1em 0;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 /* Home page */
@@ -255,21 +259,42 @@ body {
   height: 40%;
   display: flex;
   justify-content: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .card-info {
-  margin: 1em;
   padding: .5em;
+  margin-right: 10px;
   background-color: transparent;
   border: 0;
   width: 30%;
+  border: 1px solid var(--el-primary-color);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(135, 152, 124, .1);
+  border-radius: 2px;
+  transition: all .5s ease;
+}
+
+.card-info:last-child {
+  margin-right: 0;
+}
+
+.card-info:hover{
+  transform: translateY(-5%);
+  background-color: rgba(135, 152, 124, .2);
 }
 
 .card-info .card-title{
   padding-bottom: 5px;
   border-bottom: 2px solid var(--primary-color);
   width: 60%;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
 .card-info ul{
@@ -298,10 +323,12 @@ body {
 .slide.projects{
   width: 100%;
   overflow-y: scroll;
+  padding-bottom: 4em;
 }
 
-.slide.projects .project-title{
+.slide.projects .slide-title{
   margin-top: 10%;
+  text-transform: uppercase;
 }
 
 .slide.projects .box-project{
@@ -312,6 +339,60 @@ body {
 }
 
 .card-project{
-  height: 20%;
   margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 0 6px 2px #ccc;
+  transition: transform .5s ease;
+  background-color: rgba(135, 152, 124, .1);
+}
+
+.card-project img{
+  width: calc(50% - 20px);
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.card-project .project-cover-img{
+  display: flex;
+  width: 200%;
+  align-self: start;
+  transition: all .5s ease;
+  margin-bottom: 10px;
+}
+
+.card-project:hover{
+  transform: scale(1.02);
+}
+
+.card-project:hover .project-cover-img{
+  transform: translateX(-50%);
+}
+
+.card-project .card-title{
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  width: 80%;
+  text-align: center;
+  border-top: 1px solid var(--el-primary-color);
+}
+
+.card-project .technologies{
+  font-family: 'QuickSand', sans-serif;
+  color: var(--el-primary-color);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card-project .description{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  margin-left: 20px;
 }
