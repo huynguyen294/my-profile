@@ -1,4 +1,5 @@
 const panels = document.querySelectorAll('.navigation li');
+const pageViewers = document.querySelectorAll('.page-viewer li');
 const slides = document.querySelectorAll('.slide');
 const slideBox = document.querySelector('.slide-box');
 const left = document.getElementById('btn-left');
@@ -17,9 +18,21 @@ panels.forEach((panel, idx) => {
   });
 });
 
+pageViewers.forEach((pageViewer, idx) => {
+  pageViewer.addEventListener('click', () => {
+    activeSlide = idx;
+
+    removeActive();
+    setActiveSlide();
+  });
+});
+
 function removeActive() {
   panels.forEach((panel) => {
     panel.classList.remove('active');
+  });
+  pageViewers.forEach((pageViewer) => {
+    pageViewer.classList.remove('active');
   });
 }
 
@@ -40,6 +53,7 @@ setActiveSlide();
 function setActiveSlide() {
   checkActiveSlide();
   panels[activeSlide].classList.add('active');
+  pageViewers[activeSlide].classList.add('active');
   slideBox.style.transform = `translateX(${
     (-activeSlide * 100) / slides.length
   }%)`;
@@ -47,6 +61,7 @@ function setActiveSlide() {
 
 function checkActiveSlide() {
   removeActive();
+
   if (activeSlide <= 0) {
     activeSlide = 0;
     left.disabled = true;
