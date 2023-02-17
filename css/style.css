@@ -204,16 +204,27 @@ body {
   font-weight: 600;
   margin: 0 5px;
   cursor: pointer;
-  padding: 5px;
   text-transform: capitalize;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+}
+
+.navigation li p {
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  padding: 5px 10px;
 }
 
 .navigation li.active {
-  border-bottom: 2px solid var(--el-primary-color);
+  border-bottom: 2px solid #fff;
   white-space: nowrap;
-  color: var(--el-primary-color);
+  color: #fff;
+}
+
+.navigation li:hover p {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .page-viewer {
