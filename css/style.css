@@ -555,6 +555,10 @@ body {
     height: 45px;
   }
 
+  .main {
+    display: none;
+  /* }
+
   .main .button-wapper {
     height: 75%;
   }
@@ -612,5 +616,5 @@ body {
   .button-wapper .page-control {
     width: 40px;
     height: 40px;
-  }
+  } */
 }
