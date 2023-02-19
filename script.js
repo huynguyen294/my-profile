@@ -4,8 +4,30 @@ const slides = document.querySelectorAll(".slide");
 const slideBox = document.querySelector(".slide-box");
 const left = document.getElementById("btn-left");
 const right = document.getElementById("btn-right");
+const mobileSkillBtn = document.getElementById("skill-btn");
+const mobileProjectBtn = document.getElementById("project-btn");
+const skillHideBtn = document.getElementById("skill-hide-btn");
+const projectHideBtn = document.getElementById("project-hide-btn");
+const skillWindow = document.getElementById("mobile-skills");
+const projectWindow = document.getElementById("mobile-projects");
 
 let activeSlide = 0;
+
+mobileSkillBtn.addEventListener("click", () => {
+  skillWindow.classList.add("active");
+});
+
+mobileProjectBtn.addEventListener("click", () => {
+  projectWindow.classList.add("active");
+});
+
+skillHideBtn.addEventListener("click", () => {
+  skillWindow.classList.remove("active");
+});
+
+projectHideBtn.addEventListener("click", () => {
+  projectWindow.classList.remove("active");
+});
 
 slideBox.style.width = `${slides.length * 100}%`;
 
