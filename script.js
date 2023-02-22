@@ -104,7 +104,8 @@ function checkActiveSlide() {
 }
 
 function renderCardProject() {
-  const boxProjects = document.getElementById("box-projects");
+  const boxProjects = document.querySelectorAll(".box-project");
+
   const projects = [
     {
       images: [
@@ -174,24 +175,27 @@ function renderCardProject() {
     //   ],
     // },
   ];
-  let cardProjects = "";
-  projects.forEach((project) => {
-    cardProjects += `<div class="card-project">
-    <div class="project-cover-img">
-      ${project.images
-        .map((img) => `<img src="${img}" alt="cover image"></img>`)
-        .join("")}
-    </div>
-    <h3 class="card-title">${project.name}</h3>
-    <p class="technologies">${project.technologies}</p>
-    <ul class="description">
-        ${project.description
-          .map((descriptionLine) => `<li>${descriptionLine}</li>`)
+
+  boxProjects.forEach((boxProject) => {
+    let cardProjects = "";
+    projects.forEach((project) => {
+      cardProjects += `<div class="card-project">
+      <div class="project-cover-img">
+        ${project.images
+          .map((img) => `<img src="${img}" alt="cover image"></img>`)
           .join("")}
-    </ul>
-  </div>`;
+      </div>
+      <h3 class="card-title">${project.name}</h3>
+      <p class="technologies">${project.technologies}</p>
+      <ul class="description">
+          ${project.description
+            .map((descriptionLine) => `<li>${descriptionLine}</li>`)
+            .join("")}
+      </ul>
+    </div>`;
+    });
+    boxProject.innerHTML = cardProjects;
   });
-  boxProjects.innerHTML = cardProjects;
 }
 
 renderCardProject();

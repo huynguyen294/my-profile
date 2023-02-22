@@ -351,6 +351,7 @@ body {
   overflow: hidden;
   transition: transform 0.5s ease;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
 }
 
 .card-project img {
@@ -390,12 +391,14 @@ body {
   color: var(--text-primary-color);
   font-weight: 500;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .card-project .description {
   font-size: 14px;
   font-family: "Lato", sans-serif;
-  margin-left: 20px;
+  margin-left: 10px;
+  padding: 20px;
 }
 
 @media (max-width: 1400px) and (min-width: 1201px) {
@@ -592,12 +595,12 @@ body {
   position: fixed;
   width: 90%;
   left: 5%;
-  background-color: #fefefe;
+  background-color: #121212;
   top: 20px;
   height: 100vh;
   border-radius: 20px;
   padding: 20px;
-  color: #222;
+  color: #dedede;
   animation: floating-window 0.5s ease;
 }
 
@@ -610,7 +613,7 @@ body {
   position: absolute;
   top: 20px;
   font-size: 26px;
-  right: 30px;
+  right: 25px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -618,6 +621,33 @@ body {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.box-project-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0px 20px 100px 20px;
+}
+
+#app-mobile .card-project {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#app-mobile .card-project {
+  width: 100%;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 100px 20px;
+}
+
+.skills-wrapper .card-info {
+  width: 100%;
+  border-radius: 4px;
 }
 
 /* mobile and small screen */
