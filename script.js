@@ -118,7 +118,7 @@ function renderCardProject() {
         "A MERN stack website.",
         "Vocanote is an web application support learning English vocabulary. So, it has strong focus on building vocabulary management features rather than UI.",
         "Features: filter words by subjects or times, sort words by time or name, search words, review words, share words, auto generate phonetic, audio, synonyms...",
-        'Live Demo: <a href="https://vocanote.vercel.app">https://vocanote.vercel.app</a>',
+        'Live Demo: <a href="https://vocanote.vercel.app" target="_blank" rel="noopener noreferrer">https://vocanote.vercel.app</a>',
       ],
     },
     {
@@ -132,7 +132,7 @@ function renderCardProject() {
         "A website only Front-end.",
         "Make for practice purposes and involving with front-end problems when implementing a large sales website.",
         "Features: view by collections, product details, user profile, notification, order management, address management, card, payment, blogs...",
-        'Live Demo: <a href="https://https://huynguyen294.github.io/16skin-fe">https://https://huynguyen294.github.io/16skin-fe</a>',
+        'Live Demo: <a href="https://huynguyen294.github.io/16skin-fe" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/16skin-fe</a>',
       ],
     },
     {
@@ -146,7 +146,7 @@ function renderCardProject() {
         "A small MERN stack website simulate the pile of school fees.",
         "Make for practice purposes and involving into the problems when doing a completed website like: making web API server, fetching API, handing functions...",
         "Features: search tuition in system by studentID and time, send OTP to email to confirm transaction, view transaction history, edit profile...",
-        'Live Demo: <a href="https://huynguyen294.github.io/bankingtuition-fe/">https://huynguyen294.github.io/bankingtuition-fe</a>',
+        'Live Demo: <a href="https://huynguyen294.github.io/bankingtuition-fe/" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/bankingtuition-fe</a>',
       ],
     },
     {
@@ -158,7 +158,7 @@ function renderCardProject() {
       technologies: "Html, Javascript, Css",
       description: [
         "Made for the purpose of practicing html, css and javascript.",
-        'Live Demo: <a href="https://huynguyen294.github.io/50-project-web/">https://huynguyen294.github.io/50-project-web</a>',
+        'Live Demo: <a href="https://huynguyen294.github.io/50-project-web/" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/50-project-web</a>',
       ],
     },
     // {
