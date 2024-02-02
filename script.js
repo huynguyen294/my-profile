@@ -76,9 +76,7 @@ function setActiveSlide() {
   checkActiveSlide();
   panels[activeSlide].classList.add("active");
   pageViewers[activeSlide].classList.add("active");
-  slideBox.style.transform = `translateX(${
-    (-activeSlide * 100) / slides.length
-  }%)`;
+  slideBox.style.transform = `translateX(${(-activeSlide * 100) / slides.length}%)`;
 }
 
 function checkActiveSlide() {
@@ -108,11 +106,8 @@ function renderCardProject() {
 
   const projects = [
     {
-      images: [
-        "./images/project-covers/vocanote/1.png",
-        "./images/project-covers/vocanote/2.png",
-      ],
-      name: "VOCANOTE",
+      images: ["./images/project-covers/vocanote/1.png", "./images/project-covers/vocanote/2.png"],
+      name: "VOCANOTE (2022-2023)",
       technologies: "ReactJS, Zustand, NodeJS, ExpressJS, MongoDB",
       description: [
         "A MERN stack website.",
@@ -122,11 +117,8 @@ function renderCardProject() {
       ],
     },
     {
-      images: [
-        "./images/project-covers/16skin/1.jpg",
-        "./images/project-covers/16skin/2.jpg",
-      ],
-      name: "16SKIN - COSMETICS WEBSITE",
+      images: ["./images/project-covers/16skin/1.jpg", "./images/project-covers/16skin/2.jpg"],
+      name: "16SKIN - COSMETICS WEBSITE (2020)",
       technologies: "ReactJS, Redux, Scss",
       description: [
         "A website only Front-end.",
@@ -136,11 +128,8 @@ function renderCardProject() {
       ],
     },
     {
-      images: [
-        "./images/project-covers/ibanking-fee/1.jpg",
-        "./images/project-covers/ibanking-fee/2.jpg",
-      ],
-      name: "IBANKING FEE WEBSITE",
+      images: ["./images/project-covers/ibanking-fee/1.jpg", "./images/project-covers/ibanking-fee/2.jpg"],
+      name: "IBANKING FEE WEBSITE (2022)",
       technologies: "ReactJS, Redux, NodeJS, ExpressJS, MongoDB",
       description: [
         "A small MERN stack website simulate the pile of school fees.",
@@ -150,10 +139,7 @@ function renderCardProject() {
       ],
     },
     {
-      images: [
-        "./images/project-covers/50-project-web/1.jpg",
-        "./images/project-covers/50-project-web/2.jpg",
-      ],
+      images: ["./images/project-covers/50-project-web/1.jpg", "./images/project-covers/50-project-web/2.jpg"],
       name: "21 SMALL WEBSITE PROJECTS",
       technologies: "Html, Javascript, Css",
       description: [
@@ -161,19 +147,6 @@ function renderCardProject() {
         'Live Demo: <a href="https://huynguyen294.github.io/50-project-web/" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/50-project-web</a>',
       ],
     },
-    // {
-    //   images: [
-    //     './images/project-covers/todo/1.jpg',
-    //     './images/project-covers/todo/2.jpg',
-    //   ],
-    //   name: 'TODO WEBSITE',
-    //   technologies: 'Html, Javascript, Css',
-    //   description: [
-    //     'Made for the purpose of practicing advanced javascript skills learned on F8 such as: IIFE, scope, closure, hoisting,...',
-    //     'Live Demo: <a href="https://huynguyen294.github.io/todo_app_js/">https://huynguyen294.github.io/todo_app_js/</a>',
-    //     'Source Code: <a href="https://github.com/huynguyen294/todo_app_js">https://github.com/huynguyen294/todo_app_js</a>',
-    //   ],
-    // },
   ];
 
   boxProjects.forEach((boxProject) => {
@@ -181,16 +154,12 @@ function renderCardProject() {
     projects.forEach((project) => {
       cardProjects += `<div class="card-project">
       <div class="project-cover-img">
-        ${project.images
-          .map((img) => `<img src="${img}" alt="cover image"></img>`)
-          .join("")}
+        ${project.images.map((img) => `<img src="${img}" alt="cover image"></img>`).join("")}
       </div>
       <h3 class="card-title">${project.name}</h3>
       <p class="technologies">${project.technologies}</p>
       <ul class="description">
-          ${project.description
-            .map((descriptionLine) => `<li>${descriptionLine}</li>`)
-            .join("")}
+          ${project.description.map((descriptionLine) => `<li>${descriptionLine}</li>`).join("")}
       </ul>
     </div>`;
     });
