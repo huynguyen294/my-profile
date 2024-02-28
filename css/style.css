@@ -604,7 +604,7 @@ body {
   top: 20px;
   height: 100vh;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   color: #dedede;
   animation: floating-window 0.5s ease;
 }
@@ -616,9 +616,9 @@ body {
 
 .floating-window .window-hide-btn {
   position: absolute;
-  top: 20px;
+  top: 10px;
   font-size: 26px;
-  right: 25px;
+  right: 15px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -631,7 +631,7 @@ body {
 .box-project-wrapper {
   height: 100%;
   overflow-y: scroll;
-  padding: 0px 20px 100px 20px;
+  padding: 0px 10px 100px 5px;
 }
 
 #app-mobile .card-project {
@@ -646,8 +646,8 @@ body {
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px 20px 100px 20px;
+  gap: 10px;
+  padding: 10px 10px 100px 10px;
 }
 
 .skills-wrapper .card-info {
