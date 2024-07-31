@@ -106,13 +106,30 @@ function renderCardProject() {
 
   const projects = [
     {
+      images: ["./images/project-covers/easybio/1.png", "./images/project-covers/easybio/2.png"],
+      name: "EASYBIO (2024)",
+      technologies: "NextJS, NextUI, TailwindCss, MongoDB",
+      description: [
+        "A server side rendering website.",
+        "This application support media social persons easily create a bio link or portfolio",
+        "Techniques:",
+        "- Implementing server side rendering web app.",
+        "- Save images handling, allow user edit template realtime.",
+        "- API protect with credentials.",
+        'Live Demo: <a href="https://easybio.vercel.app" target="_blank" rel="noopener noreferrer">https://easybio.vercel.app</a>',
+      ],
+    },
+    {
       images: ["./images/project-covers/vocanote/1.png", "./images/project-covers/vocanote/2.png"],
       name: "VOCANOTE (2022-2023)",
       technologies: "ReactJS, Zustand, NodeJS, ExpressJS, MongoDB",
       description: [
         "A MERN stack website.",
-        "Vocanote is an web application support learning English vocabulary. So, it has strong focus on building vocabulary management features rather than UI.",
-        "Features: filter words by subjects or times, sort words by time or name, search words, review words, share words, auto generate phonetic, audio, synonyms...",
+        "An application like a notebook to note vocabulary while you are learning English. This app strongly support you manage your vocabulary then having many tools for your review such as: flashcard, multiple choice, reader, spelling,... and so many interesting features.",
+        "Techniques:",
+        "- Handling logic for many complex features",
+        "- PWA: installable for android and windows, can using offline (support some base features)",
+        "- API protect and authorization: using access token and refresh token with JWT.",
         'Live Demo: <a href="https://vocanote.vercel.app" target="_blank" rel="noopener noreferrer">https://vocanote.vercel.app</a>',
       ],
     },
@@ -125,26 +142,6 @@ function renderCardProject() {
         "Make for practice purposes and involving with front-end problems when implementing a large sales website.",
         "Features: view by collections, product details, user profile, notification, order management, address management, card, payment, blogs...",
         'Live Demo: <a href="https://huynguyen294.github.io/16skin-fe" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/16skin-fe</a>',
-      ],
-    },
-    {
-      images: ["./images/project-covers/ibanking-fee/1.jpg", "./images/project-covers/ibanking-fee/2.jpg"],
-      name: "IBANKING FEE WEBSITE (2022)",
-      technologies: "ReactJS, Redux, NodeJS, ExpressJS, MongoDB",
-      description: [
-        "A small MERN stack website simulate the pile of school fees.",
-        "Make for practice purposes and involving into the problems when doing a completed website like: making web API server, fetching API, handing functions...",
-        "Features: search tuition in system by studentID and time, send OTP to email to confirm transaction, view transaction history, edit profile...",
-        'Live Demo: <a href="https://huynguyen294.github.io/bankingtuition-fe/" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/bankingtuition-fe</a>',
-      ],
-    },
-    {
-      images: ["./images/project-covers/50-project-web/1.jpg", "./images/project-covers/50-project-web/2.jpg"],
-      name: "21 SMALL WEBSITE PROJECTS",
-      technologies: "Html, Javascript, Css",
-      description: [
-        "Made for the purpose of practicing html, css and javascript.",
-        'Live Demo: <a href="https://huynguyen294.github.io/50-project-web/" target="_blank" rel="noopener noreferrer">https://huynguyen294.github.io/50-project-web</a>',
       ],
     },
   ];
